@@ -3,6 +3,7 @@ module.exports = {
     'ts-standard'
   ],
   'rules': {
-    'comma-dangle': 'off'
+    'comma-dangle': 'off',
+    'no-trailing-spaces': 'off',
   }
 }
