@@ -1,7 +1,7 @@
 
 export const Footer = () => {
   return (
-    <footer className='h-12 flex justify-center items-center gap-1'>
+    <footer className='h-14 flex justify-center items-center gap-1 bg-white'>
       <small>
         Made with
       </small>

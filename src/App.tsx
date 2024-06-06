@@ -4,7 +4,7 @@ import { Footer } from '~/components/Footer'
 
 function App () {
   return (
-    <div className='h-screen flex flex-col'>
+    <div className='h-full flex flex-col gap-4'>
       <Toolbar />
       <ArticleList />
       <Footer />
