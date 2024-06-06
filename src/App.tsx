@@ -1,12 +1,17 @@
 import { Toolbar } from '~/components/Toolbar'
 import { ArticleList } from '~/components/ArticleList'
 import { Footer } from '~/components/Footer'
+import { Home } from '~/pages/Home'
+import { PageContainer } from '~/layouts/PageContainer'
 
 function App () {
   return (
-    <div className='h-full flex flex-col gap-4'>
+    <div className='h-screen flex flex-col'>
       <Toolbar />
-      <ArticleList />
+      <PageContainer>
+        {/* <Home /> */}
+        <ArticleList />
+      </PageContainer>
       <Footer />
     </div>
   )

@@ -1,8 +1,7 @@
 import type { Article } from '~/types'
 import { ArticleAvatar } from '~/components/ArticleAvatar'
 
-export const ArticleItem: React.FC<Article> = ({ 
-  id, 
+export const ArticleItem: React.FC<Article> = ({
   title, 
   img,
   category, 
@@ -11,7 +10,7 @@ export const ArticleItem: React.FC<Article> = ({
   date 
 }) => {
   return (
-    <article className='h-full sm:w-96 md:w-80 bg-white shadow rounded flex flex-col'>
+    <article className='h-full w-fit bg-white shadow-md rounded flex flex-col'>
       <img
         className='h-52 w-full object-cover object-center rounded-t' 
         src={ img } 
