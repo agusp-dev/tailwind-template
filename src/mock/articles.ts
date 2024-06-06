@@ -28,7 +28,8 @@ export const articles = [{
   description: 'React 18 includes significant improvements in concurrent rendering and automatic batching, enhancing both performance and the developer experience.',
   author: 'Emily Johnson',
   date: 'June 3, 2024'
-}, {
+}, 
+{
   id: '4',
   img: ArticleImg4,
   category: 'Technology',
@@ -44,4 +45,5 @@ export const articles = [{
   description: 'AWS\'s new Serverless Application Model (SAM) aims to simplify the process of building and deploying serverless applications, offering developers a more streamlined workflow.',
   author: 'Sarah Lee',
   date: 'June 2, 2024'
-}]
+}
+]

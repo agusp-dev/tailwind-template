@@ -3,17 +3,15 @@ export const UserButton = () => {
     <button 
       type='button'
       className='
-        p-1
         rounded-full
-      bg-slate-100
-        focus:ring-1
-      focus:ring-slate-200
+        hover:shadow
+        focus:ring-2
+      focus:ring-slate-100
       '
     >
       <img
-        width={24}
-        height={24} 
-        src='https://avatar.iran.liara.run/public/15' 
+        className='h-8 w-8 rounded-full'
+        src='https://ui-avatars.com/api?name=a+p' 
         alt='User' 
       />
     </button>
