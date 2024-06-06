@@ -17,7 +17,7 @@ export const PageContainer: React.FC<Props> = ({ children }) => {
           }}
         />
       </div>
-      <main className='h-full max-w-6xl mx-auto'>
+      <main className='h-full w-full'>
         { children }
       </main>
     </div>
