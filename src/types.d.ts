@@ -10,3 +10,8 @@ export interface Article {
   author: ArticleAuthor
   date: string
 }
+
+type NavItem = {
+  title: string
+  url: string
+}
