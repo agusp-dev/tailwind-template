@@ -1,9 +1,10 @@
 import { Disclosure, DisclosurePanel, DisclosureButton } from '@headlessui/react'
 import { navItems } from '~/mock/navItems'
 import { NavItem } from '~/components/NavItem'
+import { Link } from 'react-router-dom'
 
 const DesktopNav = () => (
-  <div className='hidden sm:order-2 sm:flex gap-6'>
+  <ul className='hidden sm:order-2 sm:flex gap-6'>
     {navItems?.map(({ title, url }) => (
       <NavItem 
         key={ title }
@@ -11,7 +12,7 @@ const DesktopNav = () => (
         url={ url } 
       />
     ))}
-  </div>
+  </ul>
 )
 
 const MobileNav = () => (
@@ -35,25 +36,28 @@ const MobileNav = () => (
       </svg>
     </DisclosureButton>
     <DisclosurePanel className='absolute top-14 left-0 w-full px-4'>
-      <div className='sm:hidden rounded bg-purple-100 shadow flex flex-col space-y-1 px-2 pb-3 pt-2'>
-        {navItems.map(({ title, url }) => (
+      <ul className='sm:hidden rounded bg-purple-100 shadow flex flex-col space-y-1 px-2 pb-3 pt-2'>
+        {navItems?.map(({ title, url }) => (
           <DisclosureButton
             className='p-1 rounded text-purple-900 hover:bg-purple-200'
-            as='a'
+            as={ Link }
             key={ title }
-            href={ url } 
+            to={ url }
           >
             { title }
           </DisclosureButton>
         ))}
-      </div>
+      </ul>
     </DisclosurePanel>
   </Disclosure>
 )
 
-export const HeaderNav = () => (
-  <>
-    <DesktopNav />
-    <MobileNav />
-  </>
-)
+export const HeaderNav = () => {
+  console.log('HeaderNav')
+  return (
+    <>
+      <DesktopNav />
+      <MobileNav />
+    </>
+  )
+}

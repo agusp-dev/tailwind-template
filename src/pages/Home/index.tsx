@@ -1,6 +1,14 @@
+import { useNavigate } from 'react-router-dom'
 import { HeroCtaButton } from '~/components/HeroCtaButton'
+import { NEWS } from '~/routes'
 
 export const Home = () => {
+  const navigate = useNavigate()
+
+  const handleNavigate = () => {
+    navigate(NEWS)
+  }
+
   return (
     <div className='h-full max-w-3xl mx-auto px-8 flex flex-col justify-center items-center gap-8'>
       <h1 className='text-4xl md:text-6xl text-center font-bold text-slate-800'>
@@ -13,7 +21,7 @@ export const Home = () => {
       </p>
       <HeroCtaButton 
         title='Go to the News'
-        onHandleClick={ () => console.log('aaa') }
+        onHandleClick={ handleNavigate }
       />
     </div>
   )
