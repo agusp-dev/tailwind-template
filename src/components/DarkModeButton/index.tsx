@@ -3,11 +3,12 @@ export const DarkModeButton = () => {
     <button 
       type='button'
       className='
+        order-3
         p-2
         rounded-full
         text-purple-900
         hover:bg-purple-100
-          focus:ring-1
+        focus:ring-1
         focus:ring-purple-200
       '
     >
