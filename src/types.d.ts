@@ -21,3 +21,5 @@ type Route = {
   element: JSX.Element
   children?: Array<Route>
 }
+
+type THEME = 'light' | 'dark'
