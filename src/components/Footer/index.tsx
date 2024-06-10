@@ -1,7 +1,7 @@
 
 export const Footer = () => {
   return (
-    <footer className='py-6 flex justify-center items-end gap-1 bg-white'>
+    <footer className='py-6 flex justify-center items-end gap-1 text-slate-900 bg-slate-100 dark:bg-slate-800 dark:text-white'>
       <small>
         Made with
       </small>

@@ -22,4 +22,10 @@ type Route = {
   children?: Array<Route>
 }
 
+export interface TeamMember {
+  name: string
+  role: string
+  profileImg: string
+}
+
 type THEME = 'light' | 'dark'
