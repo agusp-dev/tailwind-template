@@ -17,9 +17,7 @@ const DesktopNav = () => (
 
 const MobileNav = () => (
   <Disclosure as='nav' className='sm:hidden sm:order-2'>
-    <DisclosureButton
-      className='sm:hidden rounded-md p-1.5 text-purple-900 hover:bg-purple-100 focus:ring-1 focus:ring-purple-200'
-    >
+    <DisclosureButton className='sm:hidden rounded-md p-1.5 text-purple-900 hover:bg-purple-100 focus:ring-1 focus:ring-purple-200 dark:text-purple-200 dark:hover:bg-slate-700'>
       <svg 
         className='h-6 w-6' 
         fill='none' 
@@ -36,10 +34,10 @@ const MobileNav = () => (
       </svg>
     </DisclosureButton>
     <DisclosurePanel className='absolute top-14 left-0 w-full px-4'>
-      <ul className='sm:hidden rounded bg-purple-100 shadow flex flex-col space-y-1 px-2 pb-3 pt-2'>
+      <ul className='sm:hidden rounded bg-purple-100 dark:bg-slate-700 shadow flex flex-col space-y-1 px-2 pb-3 pt-2'>
         {navItems?.map(({ title, url }) => (
           <DisclosureButton
-            className='p-1 rounded text-purple-900 hover:bg-purple-200'
+            className='p-1 rounded text-purple-900 hover:bg-purple-200 dark:text-purple-200 dark:hover:bg-slate-600'
             as={ Link }
             key={ title }
             to={ url }
@@ -52,12 +50,9 @@ const MobileNav = () => (
   </Disclosure>
 )
 
-export const HeaderNav = () => {
-  console.log('HeaderNav')
-  return (
-    <>
-      <DesktopNav />
-      <MobileNav />
-    </>
-  )
-}
+export const HeaderNav = () => (
+  <>
+    <DesktopNav />
+    <MobileNav />
+  </>
+)
