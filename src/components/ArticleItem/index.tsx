@@ -1,18 +1,26 @@
-import type { Article } from '~/types'
+import type { Article, ArticleId } from '~/types'
 import { ArticleAvatar } from '~/components/ArticleAvatar'
 
-export const ArticleItem: React.FC<Article> = ({
-  title, 
-  img,
-  category, 
-  description, 
-  author, 
-  date 
+type Props = {
+  article: Article,
+  onHandleClick: (id: ArticleId) => void
+}
+
+export const ArticleItem: React.FC<Props> = ({
+  article,
+  onHandleClick,
 }) => {
+  const { id, title, img, category, description, author, date } = article
+  const handleClick = () => {
+    onHandleClick(id)
+  }
   return (
-    <article className='h-full w-fit bg-white dark:bg-slate-700 shadow-md rounded flex flex-col'>
+    <article
+      className='overflow-hidden h-full w-fit bg-white dark:bg-slate-700 shadow-md rounded flex flex-col hover:cursor-pointer border border-slate-100 hover:border-slate-300 dark:border-slate-700 dark:hover:border-slate-600 [&>img]:hover:scale-105'
+      onClick={ handleClick }
+    >
       <img
-        className='h-52 w-full object-cover object-center rounded-t' 
+        className='h-52 w-full object-cover object-center rounded-t transition ease-in-out duration-300' 
         src={ img } 
         alt={ title } 
       />
